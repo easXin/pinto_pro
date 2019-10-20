@@ -100,6 +100,11 @@ struct thread
 
     /* Owned by thread.c. */
     unsigned magic;                     /* Detects stack overflow. */
+  
+  
+    /* Our code for thread.c */
+    int nice;                           /* Nice value of thread */
+    int recent_cpu;                     /* Most recent CPU useed */
   };
 
 /* If false (default), use round-robin scheduler.
